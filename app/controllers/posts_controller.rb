@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :update]
 
   def index
     @posts = Post.order("created_at DESC").paginate(page: params[:page], per_page: 3)
@@ -31,13 +31,12 @@ class PostsController < ApplicationController
       render 'edit'
     end
   end
-
+  
   def show
-     @post.increase_visit
+    @post.update(view: @post.view + 1)
   end
-
+  
   def destroy
-    #@post = Post.find(params[:id])
     if @post.destroy
       redirect_to posts_path, notice: "Post deleted successfully."
     else

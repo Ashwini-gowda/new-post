@@ -5,6 +5,9 @@
   <p><%= image_tag @post.media, class:'img-fluid img-thumbnail' %></p>
 </div>
 <hr>
-<%= link_to "Edit", edit_post_path(@post), class: "btn btn-sm btn-success" %>|
+<%= link_to "Edit", edit_post_path(@post), class: "btn btn-sm btn-success" %> 
 <%= link_to "List posts", posts_path, class: "btn btn-sm btn-primary" %>
 <%= link_to "New post", new_post_path, class: "btn btn-sm btn-primary" %>
+<label style="color:blue">visit(<%= @post.view %>)times</p>
+</hr>
+

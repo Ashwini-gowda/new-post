@@ -37,7 +37,7 @@ gem 'carrierwave'
 
 gem 'simple_form'  
 
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap'
 gem 'jquery-rails'  
 gem 'ckeditor', '~> 4.1'
 gem 'will_paginate-bootstrap'
